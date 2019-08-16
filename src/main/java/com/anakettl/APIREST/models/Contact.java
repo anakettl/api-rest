@@ -9,7 +9,6 @@ import javax.validation.constraints.NotBlank;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-
 public class Contact {
 	@Id
 	@JsonIgnore
@@ -24,21 +23,11 @@ public class Contact {
 	
 	private String fone;
 
-	public Long getId() {
-		return id;
-	}
+	public Long getId() {return id;}
+	public void setId(Long id) {this.id = id;}
 
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+	public String getNome() {return nome;}
+	public void setNome(String nome) {this.nome = nome;}
 
 	public Contact(Long id, String nome, String email, String fone) {
 		super();
@@ -48,19 +37,9 @@ public class Contact {
 		this.fone = fone;
 	}
 
-	public String getEmail() {
-		return email;
-	}
+	public String getEmail() {return email;}
+	public void setEmail(String email) {this.email = email;}
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getFone() {
-		return fone;
-	}
-
-	public void setFone(String fone) {
-		this.fone = fone;
-	}
+	public String getFone() {return fone;}
+	public void setFone(String fone) {this.fone = fone;}
 }
